@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ss5:
+    image: dijedodol/simple-socks5-server:latest
+    ports:
+      - '${IP:-0.0.0.0}:${PORT:-1080}:1080/tcp'
+    environment:
+      - SSS_USERNAME=${SSS_USERNAME:-dj}
+      - SSS_PASSWORD=${SSS_PASSWORD:-dijedodol}
+    restart: always
